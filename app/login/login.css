@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap");
+
+.login-page {
+  min-height: 100vh;
+  background: #f8eee9;
+  color: #30292a;
+  overflow: hidden;
+  position: relative;
+  font-family: "DM Sans", sans-serif;
+}
+
+.login-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.login-intro {
+  min-height: 100vh;
+  padding: 48px 70px;
+  background: #d9eee9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-intro::after {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: #c9a7b8;
+  right: -220px;
+  bottom: -230px;
+  opacity: 0.55;
+}
+
+.login-intro::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 42% 58% 63% 37%;
+  background: #f6c8c5;
+  right: 70px;
+  top: 130px;
+  opacity: 0.65;
+  transform: rotate(-20deg);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-mark {
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  background: #342c30;
+  color: #f8eee9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.brand strong {
+  display: block;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+
+.brand span {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #76676a;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.intro-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow,
+.card-eyebrow {
+  margin: 0 0 18px;
+  color: #8c596b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+}
+
+.intro-content h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(52px, 5vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  font-weight: 500;
+}
+
+.intro-content h1 em {
+  color: #7c4d61;
+  font-weight: 500;
+}
+
+.intro-text {
+  max-width: 440px;
+  margin: 30px 0 25px;
+  color: #65585a;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.intro-tags span {
+  padding: 9px 15px;
+  border: 1px solid rgba(89, 74, 78, 0.2);
+  border-radius: 999px;
+  color: #65585a;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.intro-footer {
+  display: flex;
+  gap: 10px;
+  color: #786a6d;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.login-card-area {
+  min-height: 100vh;
+  padding: 45px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f8eee9;
+  position: relative;
+}
+
+.login-card {
+  width: min(100%, 470px);
+  background: #fffaf7;
+  padding: 48px;
+  border-radius: 28px;
+  border: 1px solid rgba(89, 74, 78, 0.1);
+  box-shadow: 0 25px 70px rgba(92, 66, 76, 0.1);
+}
+
+.card-heading {
+  margin-bottom: 35px;
+}
+
+.card-heading h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.card-heading > p:last-child {
+  margin: 13px 0 0;
+  color: #85777a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.input-group {
+  margin-bottom: 21px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #504548;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.input-group input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid #dfd2d0;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+  color: #30292a;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  color: #b0a4a5;
+}
+
+.input-group input:focus {
+  border-color: #7c4d61;
+  box-shadow: 0 0 0 4px rgba(124, 77, 97, 0.08);
+}
+
+.login-button {
+  width: 100%;
+  height: 54px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 13px;
+  background: #7c4d61;
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.2s ease;
+}
+
+.login-button:hover {
+  background: #693f51;
+  transform: translateY(-1px);
+}
+
+.login-button span {
+  font-size: 18px;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0;
+  color: #a29698;
+  font-size: 11px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #e8ddda;
+}
+
+.register-box {
+  padding: 17px;
+  border-radius: 15px;
+  background: #f5e2e3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.register-box strong {
+  display: block;
+  color: #4e4245;
+  font-size: 12px;
+}
+
+.register-box span {
+  display: block;
+  margin-top: 4px;
+  color: #8c7c7f;
+  font-size: 10px;
+}
+
+.register-box button {
+  border: none;
+  background: transparent;
+  color: #7c4d61;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.register-box button:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin: 20px 0 0;
+  color: #a09496;
+  font-size: 10px;
+}
+
+/* =========================================
+   DECORATION
+========================================= */
+
+.login-decoration {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #f5c7c4;
+  top: -45px;
+  right: 18%;
+  opacity: 0.45;
+}
+
+.decoration-two {
+  width: 90px;
+  height: 90px;
+  border-radius: 38% 62% 55% 45%;
+  background: #b9a5c8;
+  left: 44%;
+  bottom: 8%;
+  opacity: 0.35;
+  transform: rotate(25deg);
+}
+
+.decoration-three {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid rgba(124, 77, 97, 0.15);
+  right: 5%;
+  top: 8%;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .login-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .login-intro {
+    min-height: 520px;
+    padding: 35px 45px;
+  }
+
+  .login-card-area {
+    min-height: auto;
+    padding: 60px 35px;
+  }
+
+  .intro-content h1 {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-intro {
+    min-height: 460px;
+    padding: 28px 24px;
+  }
+
+  .intro-content h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .intro-text {
+    font-size: 13px;
+    margin-top: 22px;
+  }
+
+  .login-card-area {
+    padding: 35px 18px;
+  }
+
+  .login-card {
+    padding: 30px 23px;
+    border-radius: 22px;
+  }
+
+  .card-heading h2 {
+    font-size: 37px;
+  }
+}
+
+/* =========================================
+   ROLE SELECTOR
+========================================= */
+
+.role-section {
+  margin-bottom: 25px;
+}
+
+.role-section > label {
+  display: block;
+  margin-bottom: 10px;
+  color: #504548;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.role-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.role-option {
+  min-height: 72px;
+  padding: 12px;
+  border: 1px solid #dfd2d0;
+  border-radius: 14px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.2s ease;
+}
+
+.role-option:hover {
+  border-color: #b994a5;
+  transform: translateY(-1px);
+}
+
+.role-option.selected {
+  border-color: #7c4d61;
+  background: #f8e8e9;
+  box-shadow: 0 0 0 3px rgba(124, 77, 97, 0.07);
+}
+
+.role-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #eee3e4;
+  color: #7c4d61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.role-option.selected .role-icon {
+  background: #7c4d61;
+  color: white;
+}
+
+.role-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.role-info strong {
+  display: block;
+  color: #403538;
+  font-size: 12px;
+}
+
+.role-info span {
+  display: block;
+  margin-top: 3px;
+  color: #938487;
+  font-size: 9px;
+}
+
+.role-check {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 1px solid #d4c5c7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.role-option.selected .role-check {
+  border-color: #7c4d61;
+  background: #7c4d61;
+}
+
+/* =========================================
+   LOGIN ERROR
+========================================= */
+
+.login-error {
+  margin-bottom: 16px;
+  padding: 11px 13px;
+  border: 1px solid #e3bfc3;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #9a4d57;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   LOGIN BUTTON DISABLED
+========================================= */
+
+.login-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
